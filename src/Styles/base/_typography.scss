@@ -1,0 +1,13 @@
+@use 'Styles/utilities' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;400;300&display=swap');
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: $ff-primary;
+	color: $darkNavy;
+	font-style: normal;
+}
