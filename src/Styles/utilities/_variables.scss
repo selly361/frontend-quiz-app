@@ -1,4 +1,4 @@
-/* Colors */
+/* Color Variables */
 
 $purple: #A729F5;
 $darkNavy: #313E51;
@@ -10,6 +10,15 @@ $white: #FFF;
 $green: #26D782;
 $red: #EE5454; 
 
+/* Theme Variables */
+
+$body_bg: var(--body_bg);
+$option_bg: var(--option_bg);
+$progress-bar_bg: var(--progress-bar_bg);
+$option_box-shadow: var(--option_box-shadow);
+$button_box-shadow: var(--button_box-shadow);
+$text_primary: var(--text_primary);
+$text_secondary: var(--text_secondary);
 
 
 /* Fonts */
