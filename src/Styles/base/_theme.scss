@@ -2,16 +2,23 @@
 
 html[data-theme='dark'] {
 	--body_bg: #313e51;
+	--body_desktop-bg-image: url('../../../public/images/pattern-background-desktop-dark.svg');
+	--body_tablet-bg-image: url('../../../public/images/pattern-background-tablet-dark.svg');
+	--body_mobile-bg-image: url('../../../public/images/pattern-background-mobile-dark.svg');
 	--option_bg: #3b4d66;
 	--progress-bar_bg: #3b4d66;
 	--option_box-shadow: rgba(49, 62, 81, 0.14);
 	--button_box-shadow: rgba(49, 62, 81, 0.14);
 	--text_primary: #fff;
 	--text_secondary: #abc1e1;
+	
 }
 
 html[data-theme='light'] {
-	--body_bg: #f4f6fa ;
+	--body_bg: #f4f6fa;
+	--body_desktop-bg-image: url('../../../public/images/pattern-background-desktop-light.svg');
+	--body_tablet-bg-image: url('../../../public/images/pattern-background-tablet-light.svg');
+	--body_mobile-bg-image: url('../../../public/images/pattern-background-mobile-light.svg');
 	--option_bg: #fff;
 	--progress-bar_bg: #fff;
 	--option_box-shadow: rgba(143, 160, 193, 0.14);
