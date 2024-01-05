@@ -1,7 +1,7 @@
 @use 'Styles/utilities' as *;
 
 html[data-theme='dark'] {
-	--body_bg: #f4f6fa;
+	--body_bg: #313e51;
 	--option_bg: #3b4d66;
 	--progress-bar_bg: #3b4d66;
 	--option_box-shadow: rgba(49, 62, 81, 0.14);
@@ -11,7 +11,7 @@ html[data-theme='dark'] {
 }
 
 html[data-theme='light'] {
-	--body_bg: #313e51;
+	--body_bg: #f4f6fa ;
 	--option_bg: #fff;
 	--progress-bar_bg: #fff;
 	--option_box-shadow: rgba(143, 160, 193, 0.14);
