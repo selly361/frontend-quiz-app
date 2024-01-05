@@ -1,0 +1,28 @@
+@use 'Styles/utilities' as *;
+
+body {
+	background-color: $body_bg;
+	color: $text_primary;
+	overflow-x: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		background: $body_desktop-bg-image;
+		width: 100vw;
+		height: 100vh;
+		z-index: -1;
+	}
+}
+
+@include breakpoint(lg) {
+	body::before {
+		background: $body_tablet-bg-image;
+	}
+}
+
+@include breakpoint(sm) {
+	body::before {
+		background: $body_mobile-bg-image;
+	}
+}
