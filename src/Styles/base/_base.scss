@@ -8,7 +8,9 @@ body {
 	&::before {
 		content: '';
 		position: absolute;
-		background: $body_desktop-bg-image;
+		background: $body_desktop-bg-image no-repeat;
+		background-size: cover;
+		inset: 0;
 		width: 100vw;
 		height: 100vh;
 		z-index: -1;
@@ -17,12 +19,13 @@ body {
 
 @include breakpoint(lg) {
 	body::before {
-		background: $body_tablet-bg-image;
+		background: $body_tablet-bg-image no-repeat;
 	}
 }
 
 @include breakpoint(sm) {
 	body::before {
-		background: $body_mobile-bg-image;
+		background: $body_mobile-bg-image no-repeat;
 	}
 }
+
