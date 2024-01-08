@@ -11,6 +11,7 @@ html[data-theme='dark'] {
 	--button_box-shadow: rgba(49, 62, 81, 0.14);
 	--text_primary: #fff;
 	--text_secondary: #abc1e1;
+	--svg-icon: #fff;
 	
 }
 
@@ -25,4 +26,5 @@ html[data-theme='light'] {
 	--button_box-shadow: rgba(143, 160, 193, 0.14);
 	--text_primary: #313e51;
 	--text_secondary: #626c7f;
+	--svg-icon: #626C7F;
 }
