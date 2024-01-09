@@ -1,3 +1,4 @@
+import { SubjectIcon } from 'Components'
 import { subjectsData } from 'Constants/subjectsData'
 import { useQuizContext } from 'Contexts/QuizContextProvider'
 
@@ -7,14 +8,13 @@ function Subjects() {
 	return (
 		<div className='subjects'>
 			{subjectsData.map((subjectData, i) => (
-
-				<button onClick={() => startQuiz(i)} className='subjects__subject-button'>
-					<div className={`subjects__subject-button__icon-container ${subjectData.class}`}>
-						<subjectData.Icon />
-					</div>
-					{subjectData.label}
+				<button
+					key={subjectData.label}
+					onClick={() => startQuiz(i)}
+					className='subjects__subject-button'
+				>
+					<SubjectIcon index={i} />
 				</button>
-        
 			))}
 		</div>
 	)
