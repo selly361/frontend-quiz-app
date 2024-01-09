@@ -8,7 +8,7 @@ export const useTheme = () => {
 	useEffect(() => {
 		localStorage.setItem('theme', theme)
 
-		document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
+		document.documentElement.setAttribute('data-theme', theme)
 
 	}, [theme])
 
