@@ -1,0 +1,38 @@
+@use 'Styles/utilities' as *;
+
+.subject-icon {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+
+	&__icon-container {
+		width: 45px;
+		height: 45px;
+		display: grid;
+		place-items: center;
+		border-radius: 8px;
+
+		&--html {
+			background: #fff1e9;
+		}
+
+		&--css {
+			background: #e0fdef;
+		}
+
+		&--javascript {
+			background: #ebf0ff;
+		}
+
+		&--accessibility {
+			background: #f6e7ff;
+		}
+	}
+
+	&__label {
+		font-size: 28px;
+		font-style: normal;
+		font-weight: bold;
+		line-height: 100%; 
+	}
+}
