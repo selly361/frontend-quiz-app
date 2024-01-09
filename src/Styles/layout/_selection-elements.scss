@@ -1,0 +1,88 @@
+@use 'Styles/utilities' as *;
+
+.selection-elements {
+	$root: &;
+	width: 564px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	&__element {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 32px;
+
+		width: 564px;
+		height: 72px;
+
+		box-shadow: $option_box-shadow;
+		background: $option_bg;
+		border-radius: 20px;
+		border: 3px solid transparent;
+		padding: 0 20px;
+
+		transition: 500ms ease-in-out border-color;
+
+		&--active {
+			border-color: $purple;
+
+			#{$root}__option-marker {
+				background: $purple;
+				color: $white;
+			}
+		}
+
+		&--correct-option {
+			border-color: $green;
+
+			#{$root}__option-marker {
+				background: $green;
+				color: $white;
+			}
+		}
+
+		&--incorrect-option {
+			border-color: $red;
+
+			#{$root}__option-marker {
+				background: $red;
+				color: $white;
+			}
+		}
+
+		&__option {
+			color: $text_primary;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: bold;
+			line-height: 100%;
+			padding: 0;
+			text-align: left;
+		}
+
+		&__option-marker {
+			min-width: 45px;
+			min-height: 45px;
+
+			display: grid;
+			place-items: center;
+
+			color: $greyNavy;
+			border-radius: 8px;
+			background: $lightGrey;
+
+			font-size: 20px;
+			font-style: normal;
+			font-weight: bold;
+			line-height: 100%;
+
+			transition: 500ms ease-in-out background, 500ms ease-in-out color;
+		}
+
+		&__result-icon {
+			position: absolute;
+			right: 25px;
+		}
+	}
+}
