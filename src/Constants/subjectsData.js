@@ -4,22 +4,22 @@ const subjectsData = [
 	{
 		Icon: HTMLIcon,
 		label: 'HTML',
-		class: 'subjects__subject-button__icon-container--html'
+		class: 'subject-icon__icon-container--html'
 	},
 	{
 		Icon: CSSIcon,
 		label: 'CSS',
-		class: 'subjects__subject-button__icon-container--css'
+		class: 'subject-icon__icon-container--css'
 	},
 	{
 		Icon: JSIcon,
 		label: 'Javascript',
-		class: 'subjects__subject-button__icon-container--javascript'
+		class: 'subject-icon__icon-container--javascript'
 	},
 	{
 		Icon: AccessibilityIcon,
 		label: 'Accessibility',
-		class: 'subjects__subject-button__icon-container--accessibility'
+		class: 'subject-icon__icon-container--accessibility'
 	}
 ]
 
