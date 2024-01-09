@@ -4,23 +4,44 @@
   color: $white;
 }
 
-.theme-toggle{
+.theme-toggle {
   display: flex;
   align-items: center;
   gap: 16px;
-}
 
-.theme-toggle__circle{
-  background-color: $purple;
-  border-radius: 999px;
-  display: flex;
-  padding: 4px;
-  align-items: flex-start;
-}
+  &__circle {
+    position: relative;
+    background-color: $purple;
+    border-radius: 999px;
+    width: 48px;
+    height: 28px;
+    padding: 4px;
 
-.theme-toggle__circle-indicator{
-  background-color: $white;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
+    &-indicator {
+      position: absolute;
+      background-color: $white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transition: 0.25s ease margin;
+
+      &--dark {
+        margin-right: 20px;
+        margin-left: 0px;
+      }
+
+      &--light {
+        margin-left: 20px;
+        margin-right: 0px;
+      }
+    }
+  }
+
+  &__icon path {
+    fill: $svg-icon;
+    transition: 500ms ease-in-out fill;
+  }
 }
