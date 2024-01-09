@@ -3,6 +3,7 @@ import { AccessibilityIcon, CSSIcon, JSIcon, HTMLIcon } from 'Assets'
 const quizData = [
 	{
 		title: 'HTML',
+		index: 0,
 		Icon: HTMLIcon,
 		questions: [
 			{
@@ -87,6 +88,7 @@ const quizData = [
 	},
 	{
 		title: 'CSS',
+		index: 1,
 		Icon: CSSIcon,
 		questions: [
 			{
@@ -165,6 +167,7 @@ const quizData = [
 	},
 	{
 		title: 'JavaScript',
+		index: 2,
 		Icon: JSIcon,
 		questions: [
 			{
@@ -264,6 +267,7 @@ const quizData = [
 	},
 	{
 		title: 'Accessibility',
+		index: 3,
 		Icon: AccessibilityIcon,
 		questions: [
 			{
