@@ -17,8 +17,8 @@ function SelectionElement({ option, index }) {
 	const resultClassName =
 		active && showResults
 			? option === answer
-				? 'selection-element--correct-option'
-				: 'selection-element--incorrect-option'
+				? 'selection-elements__element--correct-option'
+				: 'selection-elements__element--incorrect-option'
 			: ''
 
 	const Icon = answer === option ? CorrectIcon : IncorrectIcon
@@ -31,16 +31,17 @@ function SelectionElement({ option, index }) {
 
 	return (
 		<button
+			key={option}
 			onClick={onClick}
-			className={`selection-element ${resultClassName} ${
-				active && !showResults ? 'selection-element--active' : ''
+			className={`selection-elements__element ${resultClassName} ${
+				active && !showResults ? 'selection-elements__element--active' : ''
 			}`}
 		>
-			<div className='selection-element__option-marker'>
+			<div className='selection-elements__element__option-marker'>
 				{indexToAlphabet[index]}
 			</div>
-			<p className='selection-element__option'>{option}</p>
-			{showResults ? <Icon className='selection-element__result-icon' /> : null}
+			<p className='selection-elements__element__option'>{option}</p>
+			{showResults ? <Icon className='selection-elements__element__result-icon' /> : null}
 		</button>
 	)
 }
