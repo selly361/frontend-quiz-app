@@ -1,0 +1,11 @@
+@use 'Styles/utilities' as *;
+
+
+.interactive-quiz-section {
+
+
+    &--animation {
+        animation: slide-animation 1s ease-in-out;
+        backface-visibility: hidden;
+    }
+}
