@@ -1,5 +1,23 @@
 @use 'Styles/utilities' as *;
 
 .button {
-  color: $white;
+	height: 72px;
+	width: 564px;
+
+	background-color: $purple;
+
+	display: grid;
+	place-items: center;
+	color: $white;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 100%;
+	border-radius: 24px;
+	box-shadow: $button_box-shadow;
+	margin-top: 32px;
+  transition: .5s ease filter;
+
+	&:hover {
+		filter: brightness(1.2);
+	}
 }
