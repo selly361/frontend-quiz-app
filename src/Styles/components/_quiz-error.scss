@@ -1,0 +1,17 @@
+@use 'Styles/utilities' as *;
+
+
+.quiz-error {
+    margin: 24px auto;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $red;
+
+
+    color: $red;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%; 
+}
