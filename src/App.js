@@ -1,12 +1,16 @@
-import { Fragment } from 'react'
-import { ReactComponent as SunIcon } from './Assets/Icons/icon-sun-dark.svg'
-import { ThemeButton } from 'Components'
+import { QuizHeader, QuizInfo, InteractiveQuizSection } from 'Components'
 
 function App() {
 	return (
-		<Fragment>
-			<ThemeButton />
-		</Fragment>
+		<main className='main'>
+			<QuizHeader />
+			<section className='main__main-section'>
+				<div className='main__main-section__information-container'>
+					<QuizInfo />
+				</div>
+				<InteractiveQuizSection />
+			</section>
+		</main>
 	)
 }
 
