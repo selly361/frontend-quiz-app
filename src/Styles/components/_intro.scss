@@ -20,4 +20,15 @@
 		line-height: 150%;
 		color: $text_secondary;
 	}
+
+
+	@include breakpoint(lg) {
+		&__head--bold {
+			margin-bottom: 16px;
+		}
+
+		&__body {
+			margin-bottom: 64px;
+		}
+	}
 }

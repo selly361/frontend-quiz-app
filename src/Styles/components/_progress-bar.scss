@@ -15,4 +15,10 @@
 		background: $purple;
         transition: 750ms ease-in-out width;
 	}
+
+
+	@include breakpoint(lg) {
+		width: 100%;
+		margin-bottom: 64px;;
+	}
 }

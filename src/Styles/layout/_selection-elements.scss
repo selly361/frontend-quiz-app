@@ -86,4 +86,16 @@
 			right: 25px;
 		}
 	}
+
+
+	@include breakpoint(lg) {
+		& {
+			width: 100%;
+
+
+			&__element {
+				width: 100%;
+			}
+		}
+	}
 }

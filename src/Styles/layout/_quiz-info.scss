@@ -25,4 +25,16 @@
 		line-height: 150%;
 		color: $text_secondary;
 	}
+
+
+
+	@include breakpoint(lg) {
+		& {
+			&__question {
+				margin-bottom: 40px;
+				width: 100%;
+				height: max-content;
+			}
+		}
+	}
 }
