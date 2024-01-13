@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from 'react'
+import { createContext, useState, useContext, useRef, useEffect } from 'react'
 import quizData from 'Constants/quizData'
 
 const QuizContext = createContext({
@@ -14,7 +14,8 @@ const QuizContext = createContext({
 	nextQuestion: () => {},
 	currentQuiz: {},
 	currentQuestion: 0,
-	started: false
+	started: false,
+	errror: false
 })
 
 function QuizContextProvider({ children }) {
@@ -26,8 +27,17 @@ function QuizContextProvider({ children }) {
 	const [showResults, setShowResults] = useState(false)
 	const [isChanging, setIsChanging] = useState(false)
 	const [started, setStarted] = useState(false)
+	const [error, setError] = useState(false)
+	const isTransitionend = useRef(true)
 
 	function submitAnswer() {
+		if(!selectedOption) {
+			setError(true)
+			return
+		}
+
+		if(!isTransitionend.current) return
+
 		const correctAnswer = currentQuiz.questions[currentQuestion].answer
 
 		if (selectedOption === correctAnswer) {
@@ -35,10 +45,14 @@ function QuizContextProvider({ children }) {
 		}
 
 		setShowResults(true)
+		setSelectedOption('')
 	}
 
 	function nextQuestion() {
+		if(!isTransitionend.current) return
+
 		setIsChanging(true)
+		isTransitionend.current = false
 		const nextQuestion = currentQuestion + 1
 
 		setTimeout(() => {
@@ -53,15 +67,17 @@ function QuizContextProvider({ children }) {
 
         setTimeout(() => {
 			setIsChanging(false)
+			isTransitionend.current = true
 		}, 1000)
 	}
 
 	function startQuiz(quizIndex) {
 		setIsChanging(true)
-		setStarted(true)
+		setCurrentQuiz(quizData[quizIndex])
+		isTransitionend.current = false
 
 		setTimeout(() => {
-			setCurrentQuiz(quizData[quizIndex])
+			setStarted(true)
 			setCurrentQuestion(0)
 			setScore(0)
 			setQuizCompleted(false)
@@ -69,6 +85,7 @@ function QuizContextProvider({ children }) {
 
         setTimeout(() => {
             setIsChanging(false)
+			isTransitionend.current = true
         }, 1000)
 	}
 
@@ -79,6 +96,11 @@ function QuizContextProvider({ children }) {
 		setQuizCompleted(false)
 		setStarted(false)
 	}
+
+
+	useEffect(() => {
+		if(selectedOption) setError(false)
+	}, [selectedOption])
 
 	return (
 		<QuizContext.Provider
@@ -95,7 +117,8 @@ function QuizContextProvider({ children }) {
                 nextQuestion,
                 currentQuiz,
                 currentQuestion,
-				started
+				started,
+				error
 			}}
 		>
 			{children}
