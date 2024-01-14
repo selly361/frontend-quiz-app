@@ -2,7 +2,7 @@
 
 ![](./public/design/preview.webp)
 
-### [Live Site](example)
+### [Live Site](https://frontend-quiz-app-kappa.vercel.app/)
 
 ## Table of contents
 
