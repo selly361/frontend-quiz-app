@@ -45,7 +45,6 @@ function QuizContextProvider({ children }) {
 		}
 
 		setShowResults(true)
-		setSelectedOption('')
 	}
 
 	function nextQuestion() {
@@ -54,6 +53,7 @@ function QuizContextProvider({ children }) {
 		setIsChanging(true)
 		isTransitionend.current = false
 		const nextQuestion = currentQuestion + 1
+		setSelectedOption('')
 
 		setTimeout(() => {
 		setShowResults(false)
